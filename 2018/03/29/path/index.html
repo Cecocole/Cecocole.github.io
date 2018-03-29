@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="参考文档：https://nodejs.org/dist/latest-v9.x/docs/api/path.html  path 是 Node 本身提供的一个核心模块，专门用来处理路径。 使用它的第一步就是先加载： 1const path = require(&apos;path&apos;); path.basename 获取一个路径的文件名部分  12345path.basename(&apos;/foo/bar/ba">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/03/29/path/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="参考文档：https://nodejs.org/dist/latest-v9.x/docs/api/path.html  path 是 Node 本身提供的一个核心模块，专门用来处理路径。 使用它的第一步就是先加载： 1const path = require(&apos;path&apos;); path.basename 获取一个路径的文件名部分  12345path.basename(&apos;/foo/bar/ba">
+<meta property="og:updated_time" content="2018-03-22T12:13:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="参考文档：https://nodejs.org/dist/latest-v9.x/docs/api/path.html  path 是 Node 本身提供的一个核心模块，专门用来处理路径。 使用它的第一步就是先加载： 1const path = require(&apos;path&apos;); path.basename 获取一个路径的文件名部分  12345path.basename(&apos;/foo/bar/ba">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-path" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/path/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.589Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>参考文档：<a href="https://nodejs.org/dist/latest-v9.x/docs/api/path.html" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v9.x/docs/api/path.html</a></p>
+</blockquote>
+<p><code>path</code> 是 Node 本身提供的一个核心模块，专门用来处理路径。</p>
+<p>使用它的第一步就是先加载：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="path-basename"><a href="#path-basename" class="headerlink" title="path.basename"></a>path.basename</h2><blockquote>
+<p>获取一个路径的文件名部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>);</span><br><span class="line"><span class="comment">// Returns: 'quux.html'</span></span><br><span class="line"></span><br><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="string">'.html'</span>);</span><br><span class="line"><span class="comment">// Returns: 'quux'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-dirname"><a href="#path-dirname" class="headerlink" title="path.dirname"></a>path.dirname</h2><blockquote>
+<p>获取一个路径的目录部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path.dirname(<span class="string">'/foo/bar/baz/asdf/quux'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz/asdf'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-extname"><a href="#path-extname" class="headerlink" title="path.extname"></a>path.extname</h2><blockquote>
+<p>获取一个路径的后缀名部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">path.extname(<span class="string">'index.html'</span>);</span><br><span class="line"><span class="comment">// Returns: '.html'</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'index.coffee.md'</span>);</span><br><span class="line"><span class="comment">// Returns: '.md'</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'index.'</span>);</span><br><span class="line"><span class="comment">// Returns: '.'</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'index'</span>);</span><br><span class="line"><span class="comment">// Returns: ''</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'.index'</span>);</span><br><span class="line"><span class="comment">// Returns: ''</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-parse"><a href="#path-parse" class="headerlink" title="path.parse"></a>path.parse</h2><blockquote>
+<p>将一个路径转换为一个对象，得到路径的各个组成部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">path.parse(<span class="string">'/home/user/dir/file.txt'</span>);</span><br><span class="line"><span class="comment">// Returns:</span></span><br><span class="line"><span class="comment">// &#123; root: '/',</span></span><br><span class="line"><span class="comment">//   dir: '/home/user/dir',</span></span><br><span class="line"><span class="comment">//   base: 'file.txt',</span></span><br><span class="line"><span class="comment">//   ext: '.txt',</span></span><br><span class="line"><span class="comment">//   name: 'file' &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-format-pathObject"><a href="#path-format-pathObject" class="headerlink" title="path.format(pathObject)"></a>path.format(pathObject)</h2><blockquote>
+<p>将具有特定属性的对象转换为一个路径</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If `dir`, `root` and `base` are provided,</span></span><br><span class="line"><span class="comment">// `$&#123;dir&#125;$&#123;path.sep&#125;$&#123;base&#125;`</span></span><br><span class="line"><span class="comment">// will be returned. `root` is ignored.</span></span><br><span class="line">path.format(&#123;</span><br><span class="line">  root: <span class="string">'/ignored'</span>,</span><br><span class="line">  dir: <span class="string">'/home/user/dir'</span>,</span><br><span class="line">  base: <span class="string">'file.txt'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Returns: '/home/user/dir/file.txt'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `root` will be used if `dir` is not specified.</span></span><br><span class="line"><span class="comment">// If only `root` is provided or `dir` is equal to `root` then the</span></span><br><span class="line"><span class="comment">// platform separator will not be included. `ext` will be ignored.</span></span><br><span class="line">path.format(&#123;</span><br><span class="line">  root: <span class="string">'/'</span>,</span><br><span class="line">  base: <span class="string">'file.txt'</span>,</span><br><span class="line">  ext: <span class="string">'ignored'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Returns: '/file.txt'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `name` + `ext` will be used if `base` is not specified.</span></span><br><span class="line">path.format(&#123;</span><br><span class="line">  root: <span class="string">'/'</span>,</span><br><span class="line">  name: <span class="string">'file'</span>,</span><br><span class="line">  ext: <span class="string">'.txt'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Returns: '/file.txt'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-join"><a href="#path-join" class="headerlink" title="path.join"></a>path.join</h2><blockquote>
+<p>将多个路径拼接为一个</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path.join(<span class="string">'/foo'</span>, <span class="string">'bar'</span>, <span class="string">'baz/asdf'</span>, <span class="string">'quux'</span>, <span class="string">'..'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz/asdf'</span></span><br><span class="line"></span><br><span class="line">path.join(<span class="string">'foo'</span>, &#123;&#125;, <span class="string">'bar'</span>);</span><br><span class="line"><span class="comment">// throws 'TypeError: Path must be a string. Received &#123;&#125;'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-isAbsolute"><a href="#path-isAbsolute" class="headerlink" title="path.isAbsolute"></a>path.isAbsolute</h2><blockquote>
+<p>判断一个路径是否是绝对路径</p>
+</blockquote>
+<p>Unix:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">path.isAbsolute(<span class="string">'/foo/bar'</span>); <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'/baz/..'</span>);  <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'qux/'</span>);     <span class="comment">// false</span></span><br><span class="line">path.isAbsolute(<span class="string">'.'</span>);        <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>Windows:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">path.isAbsolute(<span class="string">'//server'</span>);    <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'\\\\server'</span>);  <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'C:/foo/..'</span>);   <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'C:\\foo\\..'</span>); <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'bar\\baz'</span>);    <span class="comment">// false</span></span><br><span class="line">path.isAbsolute(<span class="string">'bar/baz'</span>);     <span class="comment">// false</span></span><br><span class="line">path.isAbsolute(<span class="string">'.'</span>);           <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-normalize-path"><a href="#path-normalize-path" class="headerlink" title="path.normalize(path)"></a>path.normalize(path)</h2><blockquote>
+<p>将一个非标准路径标准化</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path.normalize(<span class="string">'/foo/bar//baz/asdf/quux/..'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz/asdf'</span></span><br><span class="line"></span><br><span class="line">path.normalize(<span class="string">'C:\\temp\\\\foo\\bar\\..\\'</span>);</span><br><span class="line"><span class="comment">// Returns: 'C:\\temp\\foo\\'</span></span><br></pre></td></tr></table></figure>
+<p>##path.resolve([…paths]) </p>
+<blockquote>
+<p>类似于 <code>path.join()</code> ，也是用来路径拼接</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'./baz'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'/tmp/file/'</span>);</span><br><span class="line"><span class="comment">// Returns: '/tmp/file'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'wwwroot'</span>, <span class="string">'static_files/png/'</span>, <span class="string">'../gif/image.gif'</span>);</span><br><span class="line"><span class="comment">// if the current working directory is /home/myself/node,</span></span><br><span class="line"><span class="comment">// this returns '/home/myself/node/wwwroot/static_files/gif/image.gif'</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/path/" data-id="cjfc71nik000mvsuxw0telv77" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/29/prettier/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/29/package-npm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/29/yarn/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/web/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/spider/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/socketio/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/promise/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

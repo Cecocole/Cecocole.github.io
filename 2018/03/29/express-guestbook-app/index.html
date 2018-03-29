@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="案例Github仓库地址：https://github.com/lipengzhou/express-guestbook-case  零、准备完整目录结构如下： 123456789101112131415.├── node_modules npm安装的第三方包目录，使用 npm 装包会自动创建├── public 页面需要使用的静态资源│   ├── css│   ├── js│   ├── i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/03/29/express-guestbook-app/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="案例Github仓库地址：https://github.com/lipengzhou/express-guestbook-case  零、准备完整目录结构如下： 123456789101112131415.├── node_modules npm安装的第三方包目录，使用 npm 装包会自动创建├── public 页面需要使用的静态资源│   ├── css│   ├── js│   ├── i">
+<meta property="og:updated_time" content="2018-03-22T12:13:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="案例Github仓库地址：https://github.com/lipengzhou/express-guestbook-case  零、准备完整目录结构如下： 123456789101112131415.├── node_modules npm安装的第三方包目录，使用 npm 装包会自动创建├── public 页面需要使用的静态资源│   ├── css│   ├── js│   ├── i">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-express-guestbook-app" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/express-guestbook-app/" class="article-date">
+  <time datetime="2018-03-29T07:24:31.942Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>案例Github仓库地址：<a href="https://github.com/lipengzhou/express-guestbook-case" target="_blank" rel="noopener">https://github.com/lipengzhou/express-guestbook-case</a></p>
+</blockquote>
+<h2 id="零、准备"><a href="#零、准备" class="headerlink" title="零、准备"></a>零、准备</h2><p>完整目录结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── node_modules npm安装的第三方包目录，使用 npm 装包会自动创建</span><br><span class="line">├── public 页面需要使用的静态资源</span><br><span class="line">│   ├── css</span><br><span class="line">│   ├── js</span><br><span class="line">│   ├── img</span><br><span class="line">│   └── ...</span><br><span class="line">├── views 所有视图页面（只存储 html 文件）</span><br><span class="line">│   ├── publish.html</span><br><span class="line">│   └── index.html</span><br><span class="line">├── app.js 服务端程序入口文件，执行该文件会启动我们的 Web 服务器</span><br><span class="line">├── db.json 这里充当我们的数据库</span><br><span class="line">├── README.md 项目说明文档</span><br><span class="line">├── package.json 项目包说明文件，存储第三方包依赖等信息</span><br><span class="line">└── package-lock.json npm的包锁定文件，用来锁定第三方包的版本和提高npm下载速度</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 创建项目目录</span><br><span class="line">mkdir guestbook</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line">cd guestbook</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 初始化 package.json 文件</span><br><span class="line">npm init -y</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 将 Express 安装到项目中</span><br><span class="line">npm install express</span><br></pre></td></tr></table></figure>
+<h2 id="一、Hello-World"><a href="#一、Hello-World" class="headerlink" title="一、Hello World"></a>一、Hello World</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 0. 加载 Express</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 调用 express() 得到一个 app</span></span><br><span class="line"><span class="comment">//    类似于 http.createServer()</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 设置请求对应的处理函数</span></span><br><span class="line"><span class="comment">//    当客户端以 GET 方法请求 / 的时候就会调用第二个参数：请求处理函数</span></span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res) =&gt; &#123;</span><br><span class="line">  res.send(<span class="string">'hello world'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 监听端口号，启动 Web 服务</span></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'app listening on port 3000!'</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="二、配置模板引擎"><a href="#二、配置模板引擎" class="headerlink" title="二、配置模板引擎"></a>二、配置模板引擎</h2><blockquote>
+<p>参见：Express - 使用模板引擎</p>
+</blockquote>
+<h2 id="三、路由设计"><a href="#三、路由设计" class="headerlink" title="三、路由设计"></a>三、路由设计</h2><table>
+<thead>
+<tr>
+<th>请求方法</th>
+<th>请求路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/</td>
+<td>渲染 index.html</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publish</td>
+<td>渲染 publish.html</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/publish</td>
+<td>处理发表留言</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/publish'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.post(<span class="string">'/publish'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="四、走通页面渲染跳转"><a href="#四、走通页面渲染跳转" class="headerlink" title="四、走通页面渲染跳转"></a>四、走通页面渲染跳转</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'index.html'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/publish'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'publish.html'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="五、安装处理-Bootstrap-样式文件"><a href="#五、安装处理-Bootstrap-样式文件" class="headerlink" title="五、安装处理 Bootstrap 样式文件"></a>五、安装处理 Bootstrap 样式文件</h2><p>安装 <code>bootstrap</code> 到项目中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install bootstrap</span><br></pre></td></tr></table></figure>
+<p>将 <code>node_modules</code> 目录开放出来：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="string">'/node_modules/'</span>, express.static(<span class="string">'./node_modules/'</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="六、将数据库中的-post-渲染到首页"><a href="#六、将数据库中的-post-渲染到首页" class="headerlink" title="六、将数据库中的 post 渲染到首页"></a>六、将数据库中的 post 渲染到首页</h2><p>JavaScript 后台处理：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./db.json'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.render(<span class="string">'500.html'</span>, &#123;</span><br><span class="line">        errMessage: err.message</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      data = <span class="built_in">JSON</span>.parse(data.toString())</span><br><span class="line">      res.render(<span class="string">'index.html'</span>, &#123;</span><br><span class="line">        posts: data.posts</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.render(<span class="string">'500.html'</span>, &#123;</span><br><span class="line">        errMessage: err.message</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>index.html 页面模板字符串：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"list-group"</span>&gt;</span></span><br><span class="line">  &#123;&#123; each posts &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"list-group-item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"badge"</span>&gt;</span>&#123;&#123; $value.time &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; $value.name &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>说：<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; $value.content &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  &#123;&#123; /each &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="七、配置解析表单-post-请求体"><a href="#七、配置解析表单-post-请求体" class="headerlink" title="七、配置解析表单 post 请求体"></a>七、配置解析表单 post 请求体</h2><blockquote>
+<p>参见：Express - 解析表单 post 请求体</p>
+</blockquote>
+<h2 id="八、处理-publish-表单提交"><a href="#八、处理-publish-表单提交" class="headerlink" title="八、处理 publish 表单提交"></a>八、处理 publish 表单提交</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">'/publish'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> body = req.body</span><br><span class="line"></span><br><span class="line">  fs.readFile(<span class="string">'./db.json'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.render(<span class="string">'500.html'</span>, &#123;</span><br><span class="line">        errMessage: err.message</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      data = <span class="built_in">JSON</span>.parse(data.toString())</span><br><span class="line">      <span class="keyword">var</span> posts = data.posts</span><br><span class="line">      <span class="keyword">var</span> last = posts[posts.length - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 生成数据添加到 post 数组中</span></span><br><span class="line">      posts.unshift(&#123;</span><br><span class="line">        id: last ? last.id + <span class="number">1</span>: <span class="number">1</span>,</span><br><span class="line">        name: body.name,</span><br><span class="line">        content: body.content,</span><br><span class="line">        time: moment().format(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) <span class="comment">// moment 是一个专门用来处理时间的 JavaScript 库</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 把对象转成字符串存储到文件中</span></span><br><span class="line">      <span class="comment">// try-catch 无法捕获异步代码的异常</span></span><br><span class="line">      fs.writeFile(<span class="string">'./db.json'</span>, <span class="built_in">JSON</span>.stringify(data), <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">          <span class="keyword">return</span> res.render(<span class="string">'500.html'</span>, &#123;</span><br><span class="line">            errMessage: err.message</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 代码执行到这里，说明写入文件成功了</span></span><br><span class="line">        <span class="comment">// 在 Express 中，我们可以使用 res.redirect() 实现服务端重定向的功能</span></span><br><span class="line">        res.redirect(<span class="string">'/'</span>)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.render(<span class="string">'500.html'</span>, &#123;</span><br><span class="line">        errMessage: err.message</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="九、案例优化：提取数据操作模块"><a href="#九、案例优化：提取数据操作模块" class="headerlink" title="九、案例优化：提取数据操作模块"></a>九、案例优化：提取数据操作模块</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;readFile, writeFile&#125; = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dbPath = <span class="string">'./db.json'</span></span><br><span class="line"></span><br><span class="line">exports.getDb = getDb</span><br><span class="line"></span><br><span class="line"><span class="comment">// 封装带来的好处：</span></span><br><span class="line"><span class="comment">//    1. 可维护性</span></span><br><span class="line"><span class="comment">//    2. 其次才是重用</span></span><br><span class="line">exports.addPost = <span class="function">(<span class="params">post, callback</span>) =&gt;</span> &#123;</span><br><span class="line">  getDb(<span class="function">(<span class="params">err, dbData</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> callback(err)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 获取数组中最后一个元素</span></span><br><span class="line">    <span class="keyword">const</span> last = dbData.posts[dbData.posts.length - <span class="number">1</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 添加数据的 id 自动增长</span></span><br><span class="line">    post.id = last ? last.id + <span class="number">1</span> : <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建时间</span></span><br><span class="line">    post.createdAt = <span class="string">'2018-2-2 11:57:06'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将数据添加到数组中（这里还并没有持久化存储）</span></span><br><span class="line">    dbData.posts.push(post)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 dbData 对象转成字符串持久化存储到文件中</span></span><br><span class="line">    <span class="keyword">const</span> dbDataStr = <span class="built_in">JSON</span>.stringify(dbData)</span><br><span class="line"></span><br><span class="line">    writeFile(dbPath, dbDataStr, err =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> callback(err)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// Express 为 res 响应对象提供了一个工具方法：redirect 可以便捷的重定向</span></span><br><span class="line">      <span class="comment">// res.redirect('/')</span></span><br><span class="line">      callback(<span class="literal">null</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDb</span> (<span class="params">callback</span>) </span>&#123;</span><br><span class="line">  readFile(dbPath, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> callback(err)</span><br><span class="line">    &#125;</span><br><span class="line">    callback(<span class="literal">null</span>, <span class="built_in">JSON</span>.parse(data))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十、案例总结"><a href="#十、案例总结" class="headerlink" title="十、案例总结"></a>十、案例总结</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/express-guestbook-app/" data-id="cjfc71nhx0009vsuxqaojxeh5" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/29/fs/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/29/eslint/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/29/yarn/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/web/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/spider/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/socketio/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/promise/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

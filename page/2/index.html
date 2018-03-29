@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-nodemon" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/nodemon/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.434Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开发过程中，每次修改完代码手动重启服务器很麻烦。这里我们可以使用一个第三方命令行工具：<a href="https://github.com/remy/nodemon" target="_blank" rel="noopener">nodemon</a> 来帮我们解决这个问题。</p>
+<p><code>nodemon</code> 是一个基于Node.js 开发的一个第三方命令行工具，使用它的第一步就是先安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global nodemon</span><br></pre></td></tr></table></figure>
+<p>基本使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodemon app.js</span><br></pre></td></tr></table></figure>
+<p>只要是通过 <code>nodemon app.js</code> 启动的服务，则它会监视你的文件变化， 当文件发生变化的时候，自动帮你重启服务器。</p>
+<blockquote>
+<p>注意：该工具仅用于开发测试，不要在生产服务器中使用该命令。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/nodemon/" data-id="cjfc71nii000kvsuxfklx3i51" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-node-img" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/node-img/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.350Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用 Node.js 处理图片。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/node-img/" data-id="cjfc71nie000ivsux5vui24g9" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-module" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/module/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.281Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是模块化"><a href="#什么是模块化" class="headerlink" title="什么是模块化"></a>什么是模块化</h2><p><img src="http://img1.gtimg.com/digi/pics/hv1/241/121/1791/116490871.jpg" alt="模块化"></p>
+<blockquote>
+<p>现实角度（手机、电脑、活动板房）：</p>
+<ul>
+<li>生产效率高<ul>
+<li>可维护性好</li>
+</ul>
+</li>
+</ul>
+<p>程序角度（就是把大一个文件中很多的代码拆分到不同的小文件中，每个小文件就称之为一个模块，例如我们看到的 jQuery 真正的源码）</p>
+<ul>
+<li>开发效率高（不需要在一个文件中翻来翻去，例如 jQuery 不可能在一个文件写 1w+ 代码，按照功能划分到不同文件中）</li>
+<li>可维护性好（哪个功能出问题，直接定位该功能模块即可）</li>
+</ul>
+</blockquote>
+<p>模块化的概念有了，那程序中的模块到底该具有哪些特性就满足我们的使用了呢？</p>
+<ul>
+<li>模块作用域<ul>
+<li>好处就是模块不需要考虑全局命名空间冲突的问题</li>
+</ul>
+</li>
+<li>模块通信规则<ul>
+<li>所有模块如果都是封闭自然不行，我们需要让组件与组件相互组织联系起来，例如 CPU 需要读取内存中的数据来进行计算，然后把计算结果又交给了我们的操作系统</li>
+<li>所以我们的模块也是需要具有通信的能力的</li>
+<li>所谓的通信说白了也就是输入与输出</li>
+</ul>
+</li>
+</ul>
+<p>下面我们具体来看一下在 Node.js 中如何在多模块之间进行输入与输出。</p>
+<h2 id="Node-中的模块分类"><a href="#Node-中的模块分类" class="headerlink" title="Node 中的模块分类"></a>Node 中的模块分类</h2><p>在开始了解具体的规则之前，我们先来了解一下在 Node 中对不模块的一个具体分类，一共就三种类别：</p>
+<ul>
+<li>核心模块<ul>
+<li>由 Node 本身提供，具名的，例如 fs 文件操作模块、http 网络操作模块</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>由第三方提供，使用的时候我们需要通过 npm 进行下载然后才可以加载使用，例如我们使用过的 <code>mime</code>、<code>art-template</code>、<code>marked</code></li>
+<li>注意：不可能有第三方包的名字和核心模块的名字是一样的，否则会造成冲突</li>
+</ul>
+</li>
+<li>用户模块（自己写的）<ul>
+<li>我们在文件中写的代码很多的情况下不好编写和维护，所以我们可以考虑把文件中的代码拆分到多个文件中，那这些我们自己创建的文件就是用户模块</li>
+</ul>
+</li>
+</ul>
+<h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><blockquote>
+<p>参考文档：<a href="https://nodejs.org/dist/latest-v9.x/docs/api/" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v9.x/docs/api/</a></p>
+</blockquote>
+<p>Node 中都以具名的方式提供了不同功能的模块，例如操作文件就是：<code>fs</code></p>
+<p>核心模块（系统模块）由 Node 提供，使用的时候都必须根据特定的核心模块名称来加载使用。例如使用文件操作模块：<code>fs</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// fs.readFile</span></span><br><span class="line"><span class="comment">// fs.writeFile</span></span><br><span class="line"><span class="comment">// fs.appendFile</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>模块名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/fs.html" target="_blank" rel="noopener">fs</a></td>
+<td>文件操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/http.html" target="_blank" rel="noopener">http</a></td>
+<td>网络操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/path.html" target="_blank" rel="noopener">path</a></td>
+<td>路径操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/url.html" target="_blank" rel="noopener">url</a></td>
+<td>url 地址操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/os.html" target="_blank" rel="noopener">os</a></td>
+<td>操作系统信息</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/net.html" target="_blank" rel="noopener">net</a></td>
+<td>一种更底层的网络操作方式</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/querystring.html" target="_blank" rel="noopener">querystring</a></td>
+<td>解析查询字符串</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/util.html" target="_blank" rel="noopener">util</a></td>
+<td>工具函数模块</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="模块通信之输入-require"><a href="#模块通信之输入-require" class="headerlink" title="模块通信之输入 require"></a>模块通信之输入 <code>require</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 核心模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三方模块</span></span><br><span class="line"><span class="comment">// npm install marked</span></span><br><span class="line"><span class="keyword">var</span> marked = <span class="built_in">require</span>(<span class="string">'marked'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户模块（自己写的），正确的，正确的方式</span></span><br><span class="line"><span class="comment">// 注意：加载自己写的模块，相对路径不能省略 ./</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="built_in">require</span>(<span class="string">'./foo.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户模块（自己写的），正确的（推荐），可以省略后缀名 .js</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="built_in">require</span>(<span class="string">'./foo'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="模块通信输出-exports"><a href="#模块通信输出-exports" class="headerlink" title="模块通信输出 exports"></a>模块通信输出 <code>exports</code></h2><p>导出多个成员：写法一（麻烦，不推荐）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出多个成员：写法一</span></span><br><span class="line"><span class="built_in">module</span>.exports.a = <span class="number">123</span></span><br><span class="line"><span class="built_in">module</span>.exports.b = <span class="number">456</span></span><br><span class="line"><span class="built_in">module</span>.exports.c = <span class="number">789</span></span><br></pre></td></tr></table></figure>
+<p><strong>导出多个成员：写法二（推荐）</strong></p>
+<p>Node 为了降低开发人员的痛苦，所以为 <code>module.exports</code> 提供了一个别名 <code>exports</code> （下面协大等价于上面的写法）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports) <span class="comment">// =&gt; true</span></span><br><span class="line">exports.a = <span class="number">123</span></span><br><span class="line">exports.b = <span class="number">456</span></span><br><span class="line">exports.c = <span class="number">789</span></span><br><span class="line">exports.fn = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>导出多个成员：写法三（代码少可以，但是代码一多就不推荐了）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// module.exports = &#123;</span></span><br><span class="line"><span class="comment">//   d: 'hello',</span></span><br><span class="line"><span class="comment">//   e: 'world',</span></span><br><span class="line"><span class="comment">//   fn: function () &#123;</span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // fs.readFile(function () &#123;</span></span><br><span class="line">      </span><br><span class="line"><span class="comment">//     // &#125;)</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>导出单个成员：（唯一的写法）：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出单个成员：错误的写法</span></span><br><span class="line"><span class="comment">// 因为每个模块最终导出是 module.exports 而不是 exports 这个别名</span></span><br><span class="line"><span class="comment">// exports = function (x, y) &#123;</span></span><br><span class="line"><span class="comment">//   return x + y</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出单个成员：必须这么写</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：导出单个只能导出一次，下面的情况后者会覆盖前者：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">'hello'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 以这个为准，后者会覆盖前者</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="为什么-exports-xxx-不行"><a href="#为什么-exports-xxx-不行" class="headerlink" title="为什么 exports = xxx 不行"></a>为什么 <code>exports = xxx</code> 不行</h3><p>exports 和 <code>module.exports</code> 的一个引用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 每个模块内部有一个 module 对象</span></span><br><span class="line">  <span class="comment">// module 对象中有一个成员 exports 也是一个对象</span></span><br><span class="line">  <span class="keyword">var</span> <span class="built_in">module</span> = &#123;</span><br><span class="line">    exports: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 模块中同时还有一个成员 exports 等价于 module.exports</span></span><br><span class="line">  <span class="keyword">var</span> exports = <span class="built_in">module</span>.exports</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports) <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这样是可以的，因为 exports === module.exports</span></span><br><span class="line">  <span class="comment">// module.exports.a = 123</span></span><br><span class="line">  <span class="comment">// exports.b = 456</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这里重新赋值不管用，因为模块最后 return 的是 module.exports</span></span><br><span class="line">  <span class="comment">// exports = function () &#123;</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这才是正确的方式</span></span><br><span class="line">  <span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 最后导出的是 module.exports</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ret = fn()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ret)</span><br></pre></td></tr></table></figure>
+<h3 id="exports-和-module-exports-的区别"><a href="#exports-和-module-exports-的区别" class="headerlink" title="exports 和 module.exports 的区别"></a>exports 和 module.exports 的区别</h3><ul>
+<li>exports 和 module.exports 的区别<ul>
+<li>每个模块中都有一个 module 对象</li>
+<li>module 对象中有一个 exports 对象</li>
+<li>我们可以把需要导出的成员都挂载到 module.exports 接口对象中</li>
+<li>也就是：<code>moudle.exports.xxx = xxx</code> 的方式</li>
+<li>但是每次都 <code>moudle.exports.xxx = xxx</code> 很麻烦，点儿的太多了</li>
+<li>所以 Node 为了你方便，同时在每一个模块中都提供了一个成员叫：<code>exports</code></li>
+<li><code>exports === module.exports</code> 结果为  <code>true</code></li>
+<li>所以对于：<code>moudle.exports.xxx = xxx</code> 的方式 完全可以：<code>expots.xxx = xxx</code></li>
+<li>当一个模块需要导出单个成员的时候，这个时候必须使用：<code>module.exports = xxx</code> 的方式</li>
+<li>不要使用 <code>exports = xxx</code> 不管用</li>
+<li>因为每个模块最终向外 <code>return</code> 的是 <strong>module.exports</strong></li>
+<li>而 <code>exports</code> 只是 <code>module.exports</code> 的一个引用</li>
+<li>所以即便你为 <code>exports = xx</code> 重新赋值，也不会影响 <code>module.exports</code></li>
+<li>但是有一种赋值方式比较特殊：<code>exports = module.exports</code> 这个用来重新建立引用关系的</li>
+<li>之所以让大家明白这个道理，是希望可以更灵活的去用它</li>
+</ul>
+</li>
+</ul>
+<h3 id="特殊的导出方式"><a href="#特殊的导出方式" class="headerlink" title="特殊的导出方式"></a>特殊的导出方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">exports = <span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'默认函数被调用了'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.ajax = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'ajax 方法被调用了'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.get = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'get 方法被调用了'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="深入模块加载机制"><a href="#深入模块加载机制" class="headerlink" title="深入模块加载机制"></a>深入模块加载机制</h2><h2 id="探索模块原理"><a href="#探索模块原理" class="headerlink" title="探索模块原理"></a>探索模块原理</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/module/" data-id="cjfc71nic000hvsuxr8dbzcb5" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mocha" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/mocha/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.224Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html" target="_blank" rel="noopener">阮一峰 - 测试框架 Mocha 实例教程</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/mocha/" data-id="cjfc71nib000gvsux2k4tu82f" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js-code-style" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/js-code-style/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.150Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><h2 id="JavaScript-Standard-Style"><a href="#JavaScript-Standard-Style" class="headerlink" title="JavaScript Standard Style"></a>JavaScript Standard Style</h2><ul>
+<li><a href="https://standardjs.com/" target="_blank" rel="noopener">https://standardjs.com/</a></li>
+<li><a href="https://github.com/standard/standard" target="_blank" rel="noopener">https://github.com/standard/standard</a></li>
+</ul>
+<h2 id="Airbnb-JavaScript-Style-Guide"><a href="#Airbnb-JavaScript-Style-Guide" class="headerlink" title="Airbnb JavaScript Style Guide"></a>Airbnb JavaScript Style Guide</h2><ul>
+<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="noopener">https://github.com/airbnb/javascript</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/js-code-style/" data-id="cjfc71nia000fvsux1nxakzns" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ithub" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/ithub/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.120Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>该案例以 Node.js 中文开源技术社区 <a href="http://cnodejs.org/" target="_blank" rel="noopener">CNode</a> 为原型。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li>在 GitHub 上创建一个仓库 <code>ithub</code></li>
+<li>使用 Git 将远程仓库下载到本地 <code>git clone 远程仓库地址</code></li>
+</ol>
+<h3 id="初始化目录结构"><a href="#初始化目录结构" class="headerlink" title="初始化目录结构"></a>初始化目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── node_modules</span><br><span class="line">├── controllers 控制器</span><br><span class="line">├── models 模型</span><br><span class="line">├── public 静态资源</span><br><span class="line">├── views 视图</span><br><span class="line">├── app.js 应用程序启动入口</span><br><span class="line">├── config.js 应用配置文件</span><br><span class="line">├── .gitignore Git忽略文件</span><br><span class="line">├── package.json 项目包说明文件，用来存储项目名称，第三方包依赖等信息</span><br><span class="line">├── package-lock.json</span><br><span class="line">└── README.md 项目说明文件</span><br></pre></td></tr></table></figure>
+<p>在 app.js 中写入以下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res) =&gt; res.send(<span class="string">'Hello World!'</span>))</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Example app listening on port 3000!'</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="导入模板"><a href="#导入模板" class="headerlink" title="导入模板"></a>导入模板</h3><p>下载模板到本地：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/lipengzhou/ithub-template.git</span><br></pre></td></tr></table></figure>
+<p>将模板中的 <code>public</code> 和 <code>views</code> 拷贝到项目中。</p>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><ul>
+<li><a href="https://zh.wikipedia.org/wiki/MVC" target="_blank" rel="noopener">维基百科 - MVC</a></li>
+</ul>
+<h3 id="导入数据表"><a href="#导入数据表" class="headerlink" title="导入数据表"></a>导入数据表</h3><ul>
+<li>新建数据库 <code>ithub</code></li>
+<li>在数据库上右键 -&gt; 运行 SQL 文件</li>
+</ul>
+<h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><h3 id="用户表"><a href="#用户表" class="headerlink" title="用户表"></a>用户表</h3><h3 id="话题表"><a href="#话题表" class="headerlink" title="话题表"></a>话题表</h3><h3 id="话题分类表"><a href="#话题分类表" class="headerlink" title="话题分类表"></a>话题分类表</h3><h3 id="评论表"><a href="#评论表" class="headerlink" title="评论表"></a>评论表</h3><h2 id="路由设计"><a href="#路由设计" class="headerlink" title="路由设计"></a>路由设计</h2><table>
+<thead>
+<tr>
+<th>请求方法</th>
+<th>请求路径</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/</td>
+<td>渲染首页</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/signin</td>
+<td>渲染登陆页面</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/signin</td>
+<td>处理登陆请求</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/signup</td>
+<td>渲染注册页面</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/signup</td>
+<td>处理注册请求</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/signout</td>
+<td>处理退出请求</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/topic/create</td>
+<td>渲染发布话题页面</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/topic/create</td>
+<td>处理发布请求请求</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/topic/:topicID</td>
+<td>渲染话题详情页面</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/topic/:topicID/edit</td>
+<td>渲染编辑话题页面</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/topic/:topicID/edit</td>
+<td>处理编辑话题请求</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/topic/:topicID/delete</td>
+<td>处理删除话题请求</td>
+</tr>
+<tr>
+<td>POST</td>
+<td></td>
+<td>发表评论</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>修改评论</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>删除评论</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>个人主页</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>基本信息</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>设置</td>
+</tr>
+</tbody>
+</table>
+<h2 id="提取路由和控制器模块"><a href="#提取路由和控制器模块" class="headerlink" title="提取路由和控制器模块"></a>提取路由和控制器模块</h2><h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><ul>
+<li>拷贝 <code>resources</code> 中的 <code>public</code> 和 <code>views</code> 到案例根目录</li>
+<li><code>npm i bootstrap jquery</code></li>
+<li>开放 public 和 node_modules 静态资源</li>
+</ul>
+<h2 id="按照路由走通页面渲染"><a href="#按照路由走通页面渲染" class="headerlink" title="按照路由走通页面渲染"></a>按照路由走通页面渲染</h2><ul>
+<li>配置模板引擎</li>
+<li>根据不同路由渲染页面</li>
+</ul>
+<h2 id="用户注册"><a href="#用户注册" class="headerlink" title="用户注册"></a>用户注册</h2><h2 id="用户登陆"><a href="#用户登陆" class="headerlink" title="用户登陆"></a>用户登陆</h2><h2 id="用户退出"><a href="#用户退出" class="headerlink" title="用户退出"></a>用户退出</h2><h2 id="发表话题"><a href="#发表话题" class="headerlink" title="发表话题"></a>发表话题</h2><h2 id="查看话题"><a href="#查看话题" class="headerlink" title="查看话题"></a>查看话题</h2><h2 id="修改话题"><a href="#修改话题" class="headerlink" title="修改话题"></a>修改话题</h2><h2 id="删除话题"><a href="#删除话题" class="headerlink" title="删除话题"></a>删除话题</h2><h2 id="案例代码查看"><a href="#案例代码查看" class="headerlink" title="案例代码查看"></a>案例代码查看</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下载到本地</span></span><br><span class="line">git clone https://github.com/lipengzhou/itcast-nodejs.git</span><br></pre></td></tr></table></figure>
+<p>查看所有的标签（我针对每一大步都打了标签，方便切换）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看所有标签</span></span><br><span class="line">git tag</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看带有注释的标签</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 注意：使用 git-bash 查看，因为有中文</span></span><br><span class="line">git tag -n</span><br></pre></td></tr></table></figure>
+<p>切换指定标签：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout -f 标签名称</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如切换到 step-2</span></span><br><span class="line">git checkout -f step-2</span><br></pre></td></tr></table></figure>
+<h2 id="使用-markdown-富文本编辑器"><a href="#使用-markdown-富文本编辑器" class="headerlink" title="使用 markdown 富文本编辑器"></a>使用 markdown 富文本编辑器</h2><ul>
+<li><a href="https://github.com/lepture/editor" target="_blank" rel="noopener">https://github.com/lepture/editor</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/ithub/" data-id="cjfc71ni8000evsuxd57378cx" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-introduction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/introduction/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.092Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Node-js-是什么"><a href="#Node-js-是什么" class="headerlink" title="Node.js 是什么"></a>Node.js 是什么</h2><p>以下引自 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js 官网</a>：</p>
+<blockquote>
+<p>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<br>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.<br>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+</blockquote>
+<ul>
+<li>Node.js 是一个构建于 <a href="https://zh.wikipedia.org/wiki/V8_(JavaScript%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">Chrome V8 JavaScript 引擎</a>) 之上的一个 JavaScript 运行时</li>
+<li>Node.js 采用 <strong>事件驱动</strong>，<strong>非阻塞IO模型</strong> 使得它轻量和高效</li>
+<li>Node.js 包生态系统 <a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a> 是世界上最大的开源库生态系统</li>
+</ul>
+<p>Node.js 不是一种独立的语言，与 PHP、Python、Perl、Ruby 的“既是语言也是平台”不同。Node.js 也不是一个 JavaScript 框架，不同于 CakePHP、Django、Rails。Node.js 更不是浏览器端的库，不能与 jQuery、ExtJS 相提并论。Node.js 是一个让 JavaScript 运行在服务端的开发平台，它让 JavaScript 成为脚本语言世界的一等公民，在服务端堪与 Java、PHP、Python、Perl、Ruby 平起平坐。</p>
+<h2 id="Node-的特点"><a href="#Node-的特点" class="headerlink" title="Node 的特点"></a>Node 的特点</h2><ul>
+<li>事件驱动</li>
+<li>非阻塞 IO 模型</li>
+<li>单线程</li>
+<li>跨平台</li>
+</ul>
+<h2 id="Node-发展历史"><a href="#Node-发展历史" class="headerlink" title="Node 发展历史"></a>Node 发展历史</h2><ul>
+<li><a href="http://gitbook.cn/books/58e796fd09012f0a48761eae/index.html" target="_blank" rel="noopener">聊聊 Node.js 的历史</a></li>
+<li><a href="https://cnodejs.org/topic/555d3d54e684c4c8088a0d78" target="_blank" rel="noopener">来自朴灵大大的 – Node.js 简史</a></li>
+</ul>
+<h2 id="为什么要学习-Node"><a href="#为什么要学习-Node" class="headerlink" title="为什么要学习 Node"></a>为什么要学习 Node</h2><ul>
+<li>企业需求</li>
+<li>进一步理解 Web</li>
+<li>大前端必备技能</li>
+<li>为了更好的学习前端框架</li>
+<li>增加职业竞争力</li>
+</ul>
+<h2 id="Node-能做什么"><a href="#Node-能做什么" class="headerlink" title="Node 能做什么"></a>Node 能做什么</h2><blockquote>
+<p><a href="https://www.zhihu.com/question/20796866" target="_blank" rel="noopener">知乎 - JavaScript能做什么，该做什么？</a><br>Atwood’s Law: any application that can be written in JavaScript, will eventually be written in JavaScript.<br>凡是能用 JavaScript 写出来的，最终都会用 JavaScript写出来。</p>
+</blockquote>
+<ul>
+<li>Web 服务器</li>
+<li>命令行工具</li>
+<li>网络爬虫</li>
+<li>桌面应用程序开发（Electron）</li>
+<li>……</li>
+</ul>
+<h2 id="这门课程你能学到啥？"><a href="#这门课程你能学到啥？" class="headerlink" title="这门课程你能学到啥？"></a>这门课程你能学到啥？</h2><ul>
+<li>更进一步的理解 B/S 编程模型</li>
+<li>模块化编程</li>
+<li>Node常用API</li>
+<li>JavaScript 异步编程<ul>
+<li>回调函数</li>
+<li>Promise</li>
+<li>Generator</li>
+<li>async/await 函数</li>
+</ul>
+</li>
+<li>Express Web 开发框架</li>
+<li>Ecmascript 6</li>
+<li>…</li>
+</ul>
+<h2 id="一些资源"><a href="#一些资源" class="headerlink" title="一些资源"></a>一些资源</h2><ul>
+<li><a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener">Node.js 官方文档</a></li>
+<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">Node.js 中文文档（非官方）</a></li>
+<li><a href="https://read.douban.com/ebook/12053349/" target="_blank" rel="noopener">深入浅出 Node.js</a></li>
+<li><a href="https://book.douban.com/subject/25892704/" target="_blank" rel="noopener">Node.js 权威指南</a></li>
+<li><a href="https://book.douban.com/subject/25870705/" target="_blank" rel="noopener">Node.js 实战</a></li>
+<li><a href="https://book.douban.com/subject/25867920/" target="_blank" rel="noopener">Node.js 实战</a></li>
+<li><a href="https://book.douban.com/subject/26642320/" target="_blank" rel="noopener">Node.js实战（第2季）</a></li>
+<li><a href="http://cnodejs.org/" target="_blank" rel="noopener">Node.js 中文社区</a></li>
+<li><a href="https://github.com/alsotang/node-lessons" target="_blank" rel="noopener">Node.js 包教不包会</a></li>
+<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">EcmaScript 6 入门</a></li>
+<li><a href="https://github.com/nqdeng/7-days-nodejs" target="_blank" rel="noopener">七天学会 NodeJS</a></li>
+<li>……</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/introduction/" data-id="cjfc71ni6000dvsuxphvfxvrv" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-https" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/https/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.066Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不使用SSL/TLS的HTTP通信，就是不加密的通信。所有信息明文传播，带来了三大风险。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1） 窃听风险（eavesdropping）：第三方可以获知通信内容。</span><br><span class="line"></span><br><span class="line">（2） 篡改风险（tampering）：第三方可以修改通信内容。</span><br><span class="line"></span><br><span class="line">（3） 冒充风险（pretending）：第三方可以冒充他人身份参与通信。</span><br></pre></td></tr></table></figure>
+<p>SSL/TLS协议是为了解决这三大风险而设计的，希望达到：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1） 所有信息都是加密传播，第三方无法窃听。</span><br><span class="line"></span><br><span class="line">（2） 具有校验机制，一旦被篡改，通信双方会立刻发现。</span><br><span class="line"></span><br><span class="line">（3） 配备身份证书，防止身份被冒充。</span><br></pre></td></tr></table></figure>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1994年，NetScape公司设计了SSL协议（Secure Sockets Layer）的1.0版，但是未发布。</span><br><span class="line"></span><br><span class="line">1995年，NetScape公司发布SSL 2.0版，很快发现有严重漏洞。</span><br><span class="line"></span><br><span class="line">1996年，SSL 3.0版问世，得到大规模应用。</span><br><span class="line"></span><br><span class="line">1999年，互联网标准化组织ISOC接替NetScape公司，发布了SSL的升级版TLS 1.0版。</span><br><span class="line"></span><br><span class="line">2006年和2008年，TLS进行了两次升级，分别为TLS 1.1版和TLS 1.2版。最新的变动是2011年TLS 1.2的修订版。</span><br></pre></td></tr></table></figure>
+<p>目前，应用最广泛的是TLS 1.0，接下来是SSL 3.0。但是，主流浏览器都已经实现了TLS 1.2的支持。</p>
+<p>TLS 1.0通常被标示为SSL 3.1，TLS 1.1为SSL 3.2，TLS 1.2为SSL 3.3。</p>
+<h2 id="基本的运行过程"><a href="#基本的运行过程" class="headerlink" title="基本的运行过程"></a>基本的运行过程</h2><p>SSL/TLS协议的基本思路是采用<a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86" target="_blank" rel="noopener">公钥加密法</a>，也就是说，客户端先向服务器端索要公钥，然后用公钥加密信息，服务器收到密文后，用自己的私钥解密。</p>
+<p>但是，这里有两个问题。</p>
+<p><strong>（1）如何保证公钥不被篡改？</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决方法：将公钥放在数字证书中。只要证书是可信的，公钥就是可信的。</span><br></pre></td></tr></table></figure>
+<p><strong>（2）公钥加密计算量太大，如何减少耗用的时间？</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html" target="_blank" rel="noopener">HTTPS 升级指南</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/08/http.html" target="_blank" rel="noopener">HTTP 协议入门</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="noopener">SSL/TLS协议运行机制的概述</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html" target="_blank" rel="noopener">图解SSL/TLS协议</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html" target="_blank" rel="noopener">HTTPS的七个误解（译文）</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2014/09/ssl-latency.html" target="_blank" rel="noopener">SSL延迟有多大？</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86" target="_blank" rel="noopener">维基百科 - 公钥加密法</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E9%96%8B%E9%87%91%E9%91%B0%E8%AA%8D%E8%AD%89" target="_blank" rel="noopener">维基百科 - 公开秘钥认证</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/https/" data-id="cjfc71ni2000bvsuxlhs59d2z" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-generator" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/generator/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.009Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/generator/" data-id="cjfc71ng40000vsuxqpl133kl" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-fs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/fs/" class="article-date">
+  <time datetime="2018-03-29T07:24:31.977Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>参考文档：<a href="https://nodejs.org/dist/latest-v9.x/docs/api/fs.html" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v9.x/docs/api/fs.html</a></p>
+</blockquote>
+<h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><p>对于文件操作，Node 几乎为所有的文件操作 API 提供了同步操作和异步操作两种方式。</p>
+<ul>
+<li>同步会阻塞程序的执行，效率低（知道就行）</li>
+<li>异步相当于多找了一个人帮你干活，效率高</li>
+<li>所以建议：尽量使用异步</li>
+</ul>
+<h2 id="常用-API"><a href="#常用-API" class="headerlink" title="常用 API"></a>常用 API</h2><table>
+<thead>
+<tr>
+<th>API</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fs.access(path, callback)</td>
+<td>判断路径是否存在</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.appendFile(file, data, callback)</td>
+<td>向文件中追加内容</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.copyFile(src, callback)</td>
+<td>复制文件</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.mkdir(path, callback)</td>
+<td>创建目录</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.readDir(path, callback)</td>
+<td>读取目录列表</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.rename(oldPath, newPath, callback)</td>
+<td>重命名文件/目录</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.rmdir(path, callback)</td>
+<td>删除目录</td>
+<td>只能删除空目录</td>
+</tr>
+<tr>
+<td>fs.stat(path, callback)</td>
+<td>获取文件/目录信息</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.unlink(path, callback)</td>
+<td>删除文件</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.watch(filename[, options][, listener])</td>
+<td>监视文件/目录</td>
+<td></td>
+</tr>
+<tr>
+<td>fs.watchFile(filename[, options], listener)</td>
+<td>监视文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="案例：Markdown-文件转换器"><a href="#案例：Markdown-文件转换器" class="headerlink" title="案例：Markdown 文件转换器"></a>案例：Markdown 文件转换器</h2><blockquote>
+<p>需求：用户编写 md 格式的文件，实时的编译成 html 文件</p>
+<p>使用 Node 提供的 API 结合 EcmaScript 6 语法</p>
+</blockquote>
+<h2 id="文件操作的路径"><a href="#文件操作的路径" class="headerlink" title="文件操作的路径"></a>文件操作的路径</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 相对于当前路径</span></span><br><span class="line">fs.readFile(<span class="string">'./README.md'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 相对当前路径，可以省略 ./</span></span><br><span class="line"><span class="comment">// 注意：加载模块中的标识路径不能省略 ./</span></span><br><span class="line">fs.readFile(<span class="string">'README.md'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 绝对路径</span></span><br><span class="line">fs.readFile(<span class="string">'c:/README.md'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 绝对路径，当前 js 脚本所处磁盘根目录</span></span><br><span class="line">fs.readFile(<span class="string">'/README.md'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="文件操作的相对路径问题"><a href="#文件操作的相对路径问题" class="headerlink" title="文件操作的相对路径问题"></a>文件操作的相对路径问题</h2><blockquote>
+<p>建议：以后操作文件使用相对路径都使用 <code>path.join()</code> 方法结合 <code>__dirname</code> 来避免问题。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/fs/" data-id="cjfc71nhy000avsux2pe46wrx" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/29/yarn/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/web/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/spider/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/socketio/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/promise/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

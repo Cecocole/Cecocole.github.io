@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="什么是模块化  现实角度（手机、电脑、活动板房）：  生产效率高 可维护性好    程序角度（就是把大一个文件中很多的代码拆分到不同的小文件中，每个小文件就称之为一个模块，例如我们看到的 jQuery 真正的源码）  开发效率高（不需要在一个文件中翻来翻去，例如 jQuery 不可能在一个文件写 1w+ 代码，按照功能划分到不同文件中） 可维护性好（哪个功能出问题，直接定位该功能模块即可）   模">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/03/29/module/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="什么是模块化  现实角度（手机、电脑、活动板房）：  生产效率高 可维护性好    程序角度（就是把大一个文件中很多的代码拆分到不同的小文件中，每个小文件就称之为一个模块，例如我们看到的 jQuery 真正的源码）  开发效率高（不需要在一个文件中翻来翻去，例如 jQuery 不可能在一个文件写 1w+ 代码，按照功能划分到不同文件中） 可维护性好（哪个功能出问题，直接定位该功能模块即可）   模">
+<meta property="og:image" content="http://img1.gtimg.com/digi/pics/hv1/241/121/1791/116490871.jpg">
+<meta property="og:updated_time" content="2018-03-22T12:13:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="什么是模块化  现实角度（手机、电脑、活动板房）：  生产效率高 可维护性好    程序角度（就是把大一个文件中很多的代码拆分到不同的小文件中，每个小文件就称之为一个模块，例如我们看到的 jQuery 真正的源码）  开发效率高（不需要在一个文件中翻来翻去，例如 jQuery 不可能在一个文件写 1w+ 代码，按照功能划分到不同文件中） 可维护性好（哪个功能出问题，直接定位该功能模块即可）   模">
+<meta name="twitter:image" content="http://img1.gtimg.com/digi/pics/hv1/241/121/1791/116490871.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-module" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/module/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.281Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是模块化"><a href="#什么是模块化" class="headerlink" title="什么是模块化"></a>什么是模块化</h2><p><img src="http://img1.gtimg.com/digi/pics/hv1/241/121/1791/116490871.jpg" alt="模块化"></p>
+<blockquote>
+<p>现实角度（手机、电脑、活动板房）：</p>
+<ul>
+<li>生产效率高<ul>
+<li>可维护性好</li>
+</ul>
+</li>
+</ul>
+<p>程序角度（就是把大一个文件中很多的代码拆分到不同的小文件中，每个小文件就称之为一个模块，例如我们看到的 jQuery 真正的源码）</p>
+<ul>
+<li>开发效率高（不需要在一个文件中翻来翻去，例如 jQuery 不可能在一个文件写 1w+ 代码，按照功能划分到不同文件中）</li>
+<li>可维护性好（哪个功能出问题，直接定位该功能模块即可）</li>
+</ul>
+</blockquote>
+<p>模块化的概念有了，那程序中的模块到底该具有哪些特性就满足我们的使用了呢？</p>
+<ul>
+<li>模块作用域<ul>
+<li>好处就是模块不需要考虑全局命名空间冲突的问题</li>
+</ul>
+</li>
+<li>模块通信规则<ul>
+<li>所有模块如果都是封闭自然不行，我们需要让组件与组件相互组织联系起来，例如 CPU 需要读取内存中的数据来进行计算，然后把计算结果又交给了我们的操作系统</li>
+<li>所以我们的模块也是需要具有通信的能力的</li>
+<li>所谓的通信说白了也就是输入与输出</li>
+</ul>
+</li>
+</ul>
+<p>下面我们具体来看一下在 Node.js 中如何在多模块之间进行输入与输出。</p>
+<h2 id="Node-中的模块分类"><a href="#Node-中的模块分类" class="headerlink" title="Node 中的模块分类"></a>Node 中的模块分类</h2><p>在开始了解具体的规则之前，我们先来了解一下在 Node 中对不模块的一个具体分类，一共就三种类别：</p>
+<ul>
+<li>核心模块<ul>
+<li>由 Node 本身提供，具名的，例如 fs 文件操作模块、http 网络操作模块</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>由第三方提供，使用的时候我们需要通过 npm 进行下载然后才可以加载使用，例如我们使用过的 <code>mime</code>、<code>art-template</code>、<code>marked</code></li>
+<li>注意：不可能有第三方包的名字和核心模块的名字是一样的，否则会造成冲突</li>
+</ul>
+</li>
+<li>用户模块（自己写的）<ul>
+<li>我们在文件中写的代码很多的情况下不好编写和维护，所以我们可以考虑把文件中的代码拆分到多个文件中，那这些我们自己创建的文件就是用户模块</li>
+</ul>
+</li>
+</ul>
+<h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><blockquote>
+<p>参考文档：<a href="https://nodejs.org/dist/latest-v9.x/docs/api/" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v9.x/docs/api/</a></p>
+</blockquote>
+<p>Node 中都以具名的方式提供了不同功能的模块，例如操作文件就是：<code>fs</code></p>
+<p>核心模块（系统模块）由 Node 提供，使用的时候都必须根据特定的核心模块名称来加载使用。例如使用文件操作模块：<code>fs</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// fs.readFile</span></span><br><span class="line"><span class="comment">// fs.writeFile</span></span><br><span class="line"><span class="comment">// fs.appendFile</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>模块名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/fs.html" target="_blank" rel="noopener">fs</a></td>
+<td>文件操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/http.html" target="_blank" rel="noopener">http</a></td>
+<td>网络操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/path.html" target="_blank" rel="noopener">path</a></td>
+<td>路径操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/url.html" target="_blank" rel="noopener">url</a></td>
+<td>url 地址操作</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/os.html" target="_blank" rel="noopener">os</a></td>
+<td>操作系统信息</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/net.html" target="_blank" rel="noopener">net</a></td>
+<td>一种更底层的网络操作方式</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/querystring.html" target="_blank" rel="noopener">querystring</a></td>
+<td>解析查询字符串</td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/dist/latest-v9.x/docs/api/util.html" target="_blank" rel="noopener">util</a></td>
+<td>工具函数模块</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="模块通信之输入-require"><a href="#模块通信之输入-require" class="headerlink" title="模块通信之输入 require"></a>模块通信之输入 <code>require</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 核心模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三方模块</span></span><br><span class="line"><span class="comment">// npm install marked</span></span><br><span class="line"><span class="keyword">var</span> marked = <span class="built_in">require</span>(<span class="string">'marked'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户模块（自己写的），正确的，正确的方式</span></span><br><span class="line"><span class="comment">// 注意：加载自己写的模块，相对路径不能省略 ./</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="built_in">require</span>(<span class="string">'./foo.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户模块（自己写的），正确的（推荐），可以省略后缀名 .js</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="built_in">require</span>(<span class="string">'./foo'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="模块通信输出-exports"><a href="#模块通信输出-exports" class="headerlink" title="模块通信输出 exports"></a>模块通信输出 <code>exports</code></h2><p>导出多个成员：写法一（麻烦，不推荐）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出多个成员：写法一</span></span><br><span class="line"><span class="built_in">module</span>.exports.a = <span class="number">123</span></span><br><span class="line"><span class="built_in">module</span>.exports.b = <span class="number">456</span></span><br><span class="line"><span class="built_in">module</span>.exports.c = <span class="number">789</span></span><br></pre></td></tr></table></figure>
+<p><strong>导出多个成员：写法二（推荐）</strong></p>
+<p>Node 为了降低开发人员的痛苦，所以为 <code>module.exports</code> 提供了一个别名 <code>exports</code> （下面协大等价于上面的写法）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports) <span class="comment">// =&gt; true</span></span><br><span class="line">exports.a = <span class="number">123</span></span><br><span class="line">exports.b = <span class="number">456</span></span><br><span class="line">exports.c = <span class="number">789</span></span><br><span class="line">exports.fn = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>导出多个成员：写法三（代码少可以，但是代码一多就不推荐了）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// module.exports = &#123;</span></span><br><span class="line"><span class="comment">//   d: 'hello',</span></span><br><span class="line"><span class="comment">//   e: 'world',</span></span><br><span class="line"><span class="comment">//   fn: function () &#123;</span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // </span></span><br><span class="line"><span class="comment">//     // fs.readFile(function () &#123;</span></span><br><span class="line">      </span><br><span class="line"><span class="comment">//     // &#125;)</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>导出单个成员：（唯一的写法）：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出单个成员：错误的写法</span></span><br><span class="line"><span class="comment">// 因为每个模块最终导出是 module.exports 而不是 exports 这个别名</span></span><br><span class="line"><span class="comment">// exports = function (x, y) &#123;</span></span><br><span class="line"><span class="comment">//   return x + y</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出单个成员：必须这么写</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：导出单个只能导出一次，下面的情况后者会覆盖前者：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">'hello'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 以这个为准，后者会覆盖前者</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="为什么-exports-xxx-不行"><a href="#为什么-exports-xxx-不行" class="headerlink" title="为什么 exports = xxx 不行"></a>为什么 <code>exports = xxx</code> 不行</h3><p>exports 和 <code>module.exports</code> 的一个引用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 每个模块内部有一个 module 对象</span></span><br><span class="line">  <span class="comment">// module 对象中有一个成员 exports 也是一个对象</span></span><br><span class="line">  <span class="keyword">var</span> <span class="built_in">module</span> = &#123;</span><br><span class="line">    exports: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 模块中同时还有一个成员 exports 等价于 module.exports</span></span><br><span class="line">  <span class="keyword">var</span> exports = <span class="built_in">module</span>.exports</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports) <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这样是可以的，因为 exports === module.exports</span></span><br><span class="line">  <span class="comment">// module.exports.a = 123</span></span><br><span class="line">  <span class="comment">// exports.b = 456</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这里重新赋值不管用，因为模块最后 return 的是 module.exports</span></span><br><span class="line">  <span class="comment">// exports = function () &#123;</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这才是正确的方式</span></span><br><span class="line">  <span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 最后导出的是 module.exports</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ret = fn()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ret)</span><br></pre></td></tr></table></figure>
+<h3 id="exports-和-module-exports-的区别"><a href="#exports-和-module-exports-的区别" class="headerlink" title="exports 和 module.exports 的区别"></a>exports 和 module.exports 的区别</h3><ul>
+<li>exports 和 module.exports 的区别<ul>
+<li>每个模块中都有一个 module 对象</li>
+<li>module 对象中有一个 exports 对象</li>
+<li>我们可以把需要导出的成员都挂载到 module.exports 接口对象中</li>
+<li>也就是：<code>moudle.exports.xxx = xxx</code> 的方式</li>
+<li>但是每次都 <code>moudle.exports.xxx = xxx</code> 很麻烦，点儿的太多了</li>
+<li>所以 Node 为了你方便，同时在每一个模块中都提供了一个成员叫：<code>exports</code></li>
+<li><code>exports === module.exports</code> 结果为  <code>true</code></li>
+<li>所以对于：<code>moudle.exports.xxx = xxx</code> 的方式 完全可以：<code>expots.xxx = xxx</code></li>
+<li>当一个模块需要导出单个成员的时候，这个时候必须使用：<code>module.exports = xxx</code> 的方式</li>
+<li>不要使用 <code>exports = xxx</code> 不管用</li>
+<li>因为每个模块最终向外 <code>return</code> 的是 <strong>module.exports</strong></li>
+<li>而 <code>exports</code> 只是 <code>module.exports</code> 的一个引用</li>
+<li>所以即便你为 <code>exports = xx</code> 重新赋值，也不会影响 <code>module.exports</code></li>
+<li>但是有一种赋值方式比较特殊：<code>exports = module.exports</code> 这个用来重新建立引用关系的</li>
+<li>之所以让大家明白这个道理，是希望可以更灵活的去用它</li>
+</ul>
+</li>
+</ul>
+<h3 id="特殊的导出方式"><a href="#特殊的导出方式" class="headerlink" title="特殊的导出方式"></a>特殊的导出方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">exports = <span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'默认函数被调用了'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.ajax = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'ajax 方法被调用了'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.get = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'get 方法被调用了'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="深入模块加载机制"><a href="#深入模块加载机制" class="headerlink" title="深入模块加载机制"></a>深入模块加载机制</h2><h2 id="探索模块原理"><a href="#探索模块原理" class="headerlink" title="探索模块原理"></a>探索模块原理</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/module/" data-id="cjfc71nic000hvsuxr8dbzcb5" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/29/node-img/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/29/mocha/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/29/yarn/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/web/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/spider/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/socketio/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/promise/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
