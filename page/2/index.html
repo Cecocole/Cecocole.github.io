@@ -61,6 +61,206 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-path" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/path/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.589Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>参考文档：<a href="https://nodejs.org/dist/latest-v9.x/docs/api/path.html" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v9.x/docs/api/path.html</a></p>
+</blockquote>
+<p><code>path</code> 是 Node 本身提供的一个核心模块，专门用来处理路径。</p>
+<p>使用它的第一步就是先加载：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="path-basename"><a href="#path-basename" class="headerlink" title="path.basename"></a>path.basename</h2><blockquote>
+<p>获取一个路径的文件名部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>);</span><br><span class="line"><span class="comment">// Returns: 'quux.html'</span></span><br><span class="line"></span><br><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="string">'.html'</span>);</span><br><span class="line"><span class="comment">// Returns: 'quux'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-dirname"><a href="#path-dirname" class="headerlink" title="path.dirname"></a>path.dirname</h2><blockquote>
+<p>获取一个路径的目录部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path.dirname(<span class="string">'/foo/bar/baz/asdf/quux'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz/asdf'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-extname"><a href="#path-extname" class="headerlink" title="path.extname"></a>path.extname</h2><blockquote>
+<p>获取一个路径的后缀名部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">path.extname(<span class="string">'index.html'</span>);</span><br><span class="line"><span class="comment">// Returns: '.html'</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'index.coffee.md'</span>);</span><br><span class="line"><span class="comment">// Returns: '.md'</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'index.'</span>);</span><br><span class="line"><span class="comment">// Returns: '.'</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'index'</span>);</span><br><span class="line"><span class="comment">// Returns: ''</span></span><br><span class="line"></span><br><span class="line">path.extname(<span class="string">'.index'</span>);</span><br><span class="line"><span class="comment">// Returns: ''</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-parse"><a href="#path-parse" class="headerlink" title="path.parse"></a>path.parse</h2><blockquote>
+<p>将一个路径转换为一个对象，得到路径的各个组成部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">path.parse(<span class="string">'/home/user/dir/file.txt'</span>);</span><br><span class="line"><span class="comment">// Returns:</span></span><br><span class="line"><span class="comment">// &#123; root: '/',</span></span><br><span class="line"><span class="comment">//   dir: '/home/user/dir',</span></span><br><span class="line"><span class="comment">//   base: 'file.txt',</span></span><br><span class="line"><span class="comment">//   ext: '.txt',</span></span><br><span class="line"><span class="comment">//   name: 'file' &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-format-pathObject"><a href="#path-format-pathObject" class="headerlink" title="path.format(pathObject)"></a>path.format(pathObject)</h2><blockquote>
+<p>将具有特定属性的对象转换为一个路径</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If `dir`, `root` and `base` are provided,</span></span><br><span class="line"><span class="comment">// `$&#123;dir&#125;$&#123;path.sep&#125;$&#123;base&#125;`</span></span><br><span class="line"><span class="comment">// will be returned. `root` is ignored.</span></span><br><span class="line">path.format(&#123;</span><br><span class="line">  root: <span class="string">'/ignored'</span>,</span><br><span class="line">  dir: <span class="string">'/home/user/dir'</span>,</span><br><span class="line">  base: <span class="string">'file.txt'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Returns: '/home/user/dir/file.txt'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `root` will be used if `dir` is not specified.</span></span><br><span class="line"><span class="comment">// If only `root` is provided or `dir` is equal to `root` then the</span></span><br><span class="line"><span class="comment">// platform separator will not be included. `ext` will be ignored.</span></span><br><span class="line">path.format(&#123;</span><br><span class="line">  root: <span class="string">'/'</span>,</span><br><span class="line">  base: <span class="string">'file.txt'</span>,</span><br><span class="line">  ext: <span class="string">'ignored'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Returns: '/file.txt'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `name` + `ext` will be used if `base` is not specified.</span></span><br><span class="line">path.format(&#123;</span><br><span class="line">  root: <span class="string">'/'</span>,</span><br><span class="line">  name: <span class="string">'file'</span>,</span><br><span class="line">  ext: <span class="string">'.txt'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Returns: '/file.txt'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-join"><a href="#path-join" class="headerlink" title="path.join"></a>path.join</h2><blockquote>
+<p>将多个路径拼接为一个</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path.join(<span class="string">'/foo'</span>, <span class="string">'bar'</span>, <span class="string">'baz/asdf'</span>, <span class="string">'quux'</span>, <span class="string">'..'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz/asdf'</span></span><br><span class="line"></span><br><span class="line">path.join(<span class="string">'foo'</span>, &#123;&#125;, <span class="string">'bar'</span>);</span><br><span class="line"><span class="comment">// throws 'TypeError: Path must be a string. Received &#123;&#125;'</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-isAbsolute"><a href="#path-isAbsolute" class="headerlink" title="path.isAbsolute"></a>path.isAbsolute</h2><blockquote>
+<p>判断一个路径是否是绝对路径</p>
+</blockquote>
+<p>Unix:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">path.isAbsolute(<span class="string">'/foo/bar'</span>); <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'/baz/..'</span>);  <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'qux/'</span>);     <span class="comment">// false</span></span><br><span class="line">path.isAbsolute(<span class="string">'.'</span>);        <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>Windows:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">path.isAbsolute(<span class="string">'//server'</span>);    <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'\\\\server'</span>);  <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'C:/foo/..'</span>);   <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'C:\\foo\\..'</span>); <span class="comment">// true</span></span><br><span class="line">path.isAbsolute(<span class="string">'bar\\baz'</span>);    <span class="comment">// false</span></span><br><span class="line">path.isAbsolute(<span class="string">'bar/baz'</span>);     <span class="comment">// false</span></span><br><span class="line">path.isAbsolute(<span class="string">'.'</span>);           <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h2 id="path-normalize-path"><a href="#path-normalize-path" class="headerlink" title="path.normalize(path)"></a>path.normalize(path)</h2><blockquote>
+<p>将一个非标准路径标准化</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path.normalize(<span class="string">'/foo/bar//baz/asdf/quux/..'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz/asdf'</span></span><br><span class="line"></span><br><span class="line">path.normalize(<span class="string">'C:\\temp\\\\foo\\bar\\..\\'</span>);</span><br><span class="line"><span class="comment">// Returns: 'C:\\temp\\foo\\'</span></span><br></pre></td></tr></table></figure>
+<p>##path.resolve([…paths]) </p>
+<blockquote>
+<p>类似于 <code>path.join()</code> ，也是用来路径拼接</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'./baz'</span>);</span><br><span class="line"><span class="comment">// Returns: '/foo/bar/baz'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'/tmp/file/'</span>);</span><br><span class="line"><span class="comment">// Returns: '/tmp/file'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'wwwroot'</span>, <span class="string">'static_files/png/'</span>, <span class="string">'../gif/image.gif'</span>);</span><br><span class="line"><span class="comment">// if the current working directory is /home/myself/node,</span></span><br><span class="line"><span class="comment">// this returns '/home/myself/node/wwwroot/static_files/gif/image.gif'</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/path/" data-id="cjfc7iasd000ltsux0npn8hyi" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-package-npm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/package-npm/" class="article-date">
+  <time datetime="2018-03-29T07:24:32.556Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>npm 全称 <code>Node Package Manager</code>，它的诞生是为了解决 Node 中第三方包共享的问题。<br>和浏览器一样，由于都是 JavaScript，所以前端开发也使用 npm 作为第三方包管理工具。<br>例如大名鼎鼎的 jQuery、Bootstrap 等都可以通过 npm 来安装。<br>所以官方把 npm 定义为 <code>JavaScript Package Manager</code>。</p>
+<h2 id="npm-的两层含义"><a href="#npm-的两层含义" class="headerlink" title="npm 的两层含义"></a>npm 的两层含义</h2><h3 id="npm-网站"><a href="#npm-网站" class="headerlink" title="npm 网站"></a>npm 网站</h3><blockquote>
+<p>npmjs.com，提供了存放数据包的能力，类似于 Github ，但是不提供版本管理</p>
+<p>开发者可以把一些 JavaScript 相关工具放到这个系统中</p>
+</blockquote>
+<h3 id="npm-命令行工具"><a href="#npm-命令行工具" class="headerlink" title="npm 命令行工具"></a>npm 命令行工具</h3><p>npm 的第二层含义就是一个命令行工具，只要你安装了 node 就已经安装了 npm。</p>
+<p>npm 也有版本这个概念。</p>
+<p>可以通过在命令行中输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --version</span><br></pre></td></tr></table></figure>
+<p>升级 npm（自己升级自己）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global npm</span><br></pre></td></tr></table></figure>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在项目中初始化一个 package.json 文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 凡是使用 npm 来管理的项目都会有这么一个文件</span></span><br><span class="line">npm init</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 跳过向导，快速生成 package.json 文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写是 -y</span></span><br><span class="line">npm init --yes</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 一次性安装 dependencies 中所有的依赖项</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 简写是 npm i</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装指定的包，可以简写为 npm i 包名</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> npm 5 以前只下载，不会保存依赖信息，如果需要保存，则需要加上 `--save` 选项</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> npm 5 以后就可以省略 --save 选项了</span></span><br><span class="line">npm install 包名</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 一次性安装多个指定包</span></span><br><span class="line">npm install 包名 包名 包名 ...</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装指定版本的包</span></span><br><span class="line">npm install 包名@版本号</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 卸载指定的包</span></span><br><span class="line">npm uninstall 包名</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装全局包</span></span><br><span class="line">npm install --global 包名</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看使用帮助</span></span><br><span class="line">npm help</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看某个命令的使用帮助</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如我忘记了 uninstall 命令的简写了，这个时候，可以输入 `npm uninstall --<span class="built_in">help</span>` 来查看使用帮助</span></span><br><span class="line">npm 命令 --help</span><br></pre></td></tr></table></figure>
+<h2 id="npm-安装全局包"><a href="#npm-安装全局包" class="headerlink" title="npm 安装全局包"></a>npm 安装全局包</h2><p>我们除了可以使用 npm 安装项目中适应的依赖包之外，还有一些包比较特殊，这种不是在项目 <code>require()</code> 使用的，而是<br>通过全局安装之后使用它提供的命令来完成某种功能，就像咱们学过的 git 一样。</p>
+<blockquote>
+<p>凡是往全局安装的包我们称之为全局命令行工具，这种包安装完毕之后会在命令行中为你提供了一个命令来完成某种功能。</p>
+<p>程序交互方式分为两种：</p>
+<ul>
+<li>GUI（Graphical User Interface）图形交互软件</li>
+<li>CLI（Command Line Interface） 命令行交互软件，某些方面命令行操作要比图形界面更高效</li>
+<li>《浪潮之巅》</li>
+<li>施乐 -》 苹果、微软</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>提示：安装全局包必须加 <code>--global</code> 参数<br>安装全局包在哪里执行都可以</p>
+</blockquote>
+<h3 id="http-server"><a href="#http-server" class="headerlink" title="http-server"></a><code>http-server</code></h3><h3 id="nodemon"><a href="#nodemon" class="headerlink" title="nodemon"></a><code>nodemon</code></h3><h3 id="less"><a href="#less" class="headerlink" title="less"></a><code>less</code></h3><blockquote>
+<p>参考文档：<a href="http://lesscss.org/" target="_blank" rel="noopener">http://lesscss.org/</a><br>作用：支持在命令行中打命令完成 less 文件的编译</p>
+</blockquote>
+<p>安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g less</span><br></pre></td></tr></table></figure>
+<p>安装完毕之后，我们可以在终端中输入以下命令进行测试：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 因为在我们的 Linus 操作系统中，有一个操作系统默认命令：less</span></span><br><span class="line">lessc --version</span><br></pre></td></tr></table></figure>
+<p>基本使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 编译 less 文件，将结束输出到命令行中</span></span><br><span class="line">lessc styles.less</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编译 less 文件，将结果输出到指定的路径</span></span><br><span class="line">lessc styles.less styles.css</span><br></pre></td></tr></table></figure>
+<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><blockquote>
+<p>参考文档：<a href="https://browsersync.io/" target="_blank" rel="noopener">https://browsersync.io/</a><br>作用：文件改变浏览器自动刷新（同步测试）</p>
+</blockquote>
+<p>安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g browser-sync</span><br></pre></td></tr></table></figure>
+<p>基本使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser-sync start --server --files "css/*.css, js/*.js, *.html"</span><br></pre></td></tr></table></figure>
+<h3 id="全局包到底安装到了哪里"><a href="#全局包到底安装到了哪里" class="headerlink" title="全局包到底安装到了哪里"></a>全局包到底安装到了哪里</h3><p>我们可以通过在命令行输入来查看全局包的安装路径：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm root -g</span><br></pre></td></tr></table></figure>
+<p>现在这个东西只需要了解就行了。</p>
+<p>因为以前的 node 版本一旦升级就会导致丢失了全局包，新版的 node 已经没有这个问题了。</p>
+<h2 id="解决-npm-被墙问题"><a href="#解决-npm-被墙问题" class="headerlink" title="解决 npm 被墙问题"></a>解决 npm 被墙问题</h2><blockquote>
+<p>参考文档：<a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a></p>
+</blockquote>
+<p>npm 存储包文件的服务器在国外，有时候会被墙，速度很慢，所以我们需要解决这个问题。</p>
+<p>国内淘宝的开发团队把 npm 在国内做了一个备份，网址是：<a href="http://npm.taobao.org/。" target="_blank" rel="noopener">http://npm.taobao.org/。</a></p>
+<p>最简单的方式就是我们在安装包的时候告诉 npm 你去哪个服务器下载。</p>
+<p>例如使用淘宝的 npm 镜像源下载 jquery:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>但是每次手动往后面加 <code>--registry=https://registry.npm.taobao.org</code> 很麻烦，<br>所以我们可以通过修改配置文件的方式来处理解决。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 配置到淘宝服务器</span></span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看 npm 配置信息</span></span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+<p>只要经过了上面命令的配置，则你以后所有的 <code>npm install</code> 都会使用你配置的 <code>registry</code> 下载。</p>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>我们的项目会放到云端的仓库中，例如 github ，第三方包没有上传的意义，我们只需要把我们的源码放到云端仓库，<code>node_modules</code> 目录中存储的就是第三方包（不用担心丢失问题），如果没有 <code>package.json</code> 文件则你就找不回来了。</p>
+<p>我们建议每一个项目都要有一个 <code>package.json</code> 文件（包描述文件，就像产品的说明书一样），给人踏实的感觉最重要的就是保存这个项目的第三方依赖信息（因为我们不需要提交第三方包到我们的云端仓库，只需要提交我们自己的代码），有了这个文件中的依赖信息结合 <code>npm install</code> 命令我们就可以放心了。</p>
+<p>这个文件可以通过 <code>npm init</code> 的方式来自动初始化出来。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\lpz\Desktop\npm-demo&gt;npm init</span><br><span class="line">This utility will walk you through creating a package.json file.</span><br><span class="line">It only covers the most common items, and tries to guess sensible defaults.</span><br><span class="line"></span><br><span class="line">See <span class="string">`npm help json`</span> <span class="keyword">for</span> definitive documentation on these fields</span><br><span class="line">and exactly what they <span class="keyword">do</span>.</span><br><span class="line"></span><br><span class="line">Use <span class="string">`npm install &lt;pkg&gt; --save`</span> afterwards to install a package and</span><br><span class="line">save it <span class="keyword">as</span> a dependency <span class="keyword">in</span> the package.json file.</span><br><span class="line"></span><br><span class="line">Press ^C at any time to quit.</span><br><span class="line">name: (npm-demo) 项目的名称</span><br><span class="line">version: (<span class="number">1.0</span><span class="number">.0</span>) <span class="number">0.0</span><span class="number">.1</span> 项目版本</span><br><span class="line">description: 项目简介</span><br><span class="line">entry point: (index.js) main.js 项目入口</span><br><span class="line">test command: 测试命令，暂且不用关系</span><br><span class="line">git repository: 仓库地址</span><br><span class="line">keywords: 关键字，如果是一个开源项目，则可以填一些关键字被别人在 npm 中搜索到</span><br><span class="line">author: lipengzhou 项目的开发者</span><br><span class="line">license: (ISC) 开源协议</span><br><span class="line">About to write to C:\Users\lpz\Desktop\npm-demo\package.json:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"npm-demo"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"这是一个测试项目"</span>,</span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"main.js"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">"lipengzhou"</span>,</span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Is <span class="keyword">this</span> ok? (yes) yes</span><br></pre></td></tr></table></figure>
+<p>对于咱们目前来讲，最有用的是那个 <code>dependencies</code> 选项，可以用来帮我们保存第三方包的依赖信息。</p>
+<p>如果你的 <code>node_modules</code> 删除了也不用担心，我们只需要：<code>npm install</code> 就会自动把 <code>package.json</code> 中的 <code>dependencies</code> 中所有的依赖项都下载回来。</p>
+<ul>
+<li><strong>建议每个项目的根目录下都有一个 <code>package.json</code> 文件</strong><ul>
+<li>不同的项目有不同依赖，各自保存各自的</li>
+</ul>
+</li>
+<li>建议执行 <code>npm install 包名的</code> 的时候都加上 <code>--save</code> 这个选项，目的是用来保存依赖项信息<ul>
+<li>npm 5 以前不会自动保存依赖信息到 package.json 文件中，必须手动加 <code>--save</code> 选项才可以</li>
+<li>npm 5 以后不需要加 <code>--save</code> 选项了，因为它会自动保存依赖项</li>
+</ul>
+</li>
+</ul>
+<h3 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h3><h3 id="main"><a href="#main" class="headerlink" title="main"></a>main</h3><h3 id="scripts"><a href="#scripts" class="headerlink" title="scripts"></a>scripts</h3><h2 id="package-lock-json"><a href="#package-lock-json" class="headerlink" title="package-lock.json"></a>package-lock.json</h2><p>npm 5 以前是不会有 <code>package-lock.json</code> 这个文件的。（被开发者诟病，吐槽的问题）。</p>
+<p>以前会自作多情的自动给你升级。</p>
+<p>npm 5 以后才加入了这个文件。</p>
+<p>当你安装包的时候，npm 都会生成或者更新 <code>package-lock.json</code> 这个文件。</p>
+<ul>
+<li>npm 5 以后的版本安装包不需要加 <code>--save</code> 参数，它会自动保存依赖信息</li>
+<li>当你安装包的时候，会自动创建或者是更新 <code>package-lock.json</code> 这个文件</li>
+<li><code>package-lock.json</code> 这个文件会保存 <code>node_modules</code> 中所有包的信息（版本、下载地址）<ul>
+<li>这样的话重新 <code>npm install</code> 的时候速度就可以提升</li>
+</ul>
+</li>
+<li>从文件来看，有一个 <code>lock</code> 称之为锁<ul>
+<li>这个 <code>lock</code> 是用来锁定版本的</li>
+<li>如果项目依赖了 <code>1.1.1</code> 版本</li>
+<li>如果你重新 isntall 其实会下载最新版本，而不是 1.1.1</li>
+<li>我们的目的就是希望可以锁住 1.1.1 这个版本</li>
+<li>所以这个 <code>package-lock.json</code> 这个文件的另一个作用就是锁定版本号，防止自动升级新版</li>
+</ul>
+</li>
+</ul>
+<h2 id="dependencies-和-devDependencies"><a href="#dependencies-和-devDependencies" class="headerlink" title="dependencies 和 devDependencies"></a>dependencies 和 devDependencies</h2><ul>
+<li><code>--save</code> 会保存到 <code>dependencies</code> 依赖项中</li>
+<li><code>--save-dev</code> 会保存到 <code>devDependencies</code> 依赖项中</li>
+</ul>
+<p>我们把一些辅助开发的工具包安装到 <code>devDependencies</code> 中。这样做的目的是对包进行分类，项目上线的时候可以使用 <code>npm install --production</code> 命令只安装 <code>dependencies</code> 依赖项中的包。</p>
+<h2 id="npm-scri-pts"><a href="#npm-scri-pts" class="headerlink" title="npm scri pts"></a>npm scri pts</h2><blockquote>
+<p>学习参考：<a href="http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/29/package-npm/" data-id="cjfc7iasf000otsuxbuteyyd3" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-node-path" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/29/node-path/" class="article-date">
@@ -110,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/node-path/" data-id="cjfc7fcsk000jn4uxxfqiyyu7" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/node-path/" data-id="cjfc7iasb000jtsuxqxxssrxz" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -136,7 +336,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/node-mongodb/" data-id="cjfc7fcqn0001n4uxqix8n41e" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/node-mongodb/" data-id="cjfc7iaqi0001tsux117dxdu3" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -171,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/nodemon/" data-id="cjfc7fcsk000kn4uxay3ut0sp" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/nodemon/" data-id="cjfc7iasc000ktsuxmgjwdhvv" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -198,7 +398,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/node-img/" data-id="cjfc7fcsj000in4uxiziqwdcu" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/node-img/" data-id="cjfc7iase000mtsuxhznd2cyz" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -356,7 +556,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/module/" data-id="cjfc7fcsi000hn4uxgv6g98t9" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/module/" data-id="cjfc7iasa000itsuxgs5jga3o" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -385,7 +585,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/mocha/" data-id="cjfc7fcsh000gn4ux4s49wz88" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/mocha/" data-id="cjfc7ias8000htsux6d9t8rdb" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -418,7 +618,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/js-code-style/" data-id="cjfc7fcsg000fn4uxecly7vhm" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/js-code-style/" data-id="cjfc7ias6000gtsux3h7g0b0q" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -580,148 +780,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/ithub/" data-id="cjfc7fcse000en4ux5er5lvve" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-introduction" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/29/introduction/" class="article-date">
-  <time datetime="2018-03-29T07:24:32.092Z" itemprop="datePublished">2018-03-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Node-js-是什么"><a href="#Node-js-是什么" class="headerlink" title="Node.js 是什么"></a>Node.js 是什么</h2><p>以下引自 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js 官网</a>：</p>
-<blockquote>
-<p>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<br>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.<br>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
-</blockquote>
-<ul>
-<li>Node.js 是一个构建于 <a href="https://zh.wikipedia.org/wiki/V8_(JavaScript%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">Chrome V8 JavaScript 引擎</a>) 之上的一个 JavaScript 运行时</li>
-<li>Node.js 采用 <strong>事件驱动</strong>，<strong>非阻塞IO模型</strong> 使得它轻量和高效</li>
-<li>Node.js 包生态系统 <a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a> 是世界上最大的开源库生态系统</li>
-</ul>
-<p>Node.js 不是一种独立的语言，与 PHP、Python、Perl、Ruby 的“既是语言也是平台”不同。Node.js 也不是一个 JavaScript 框架，不同于 CakePHP、Django、Rails。Node.js 更不是浏览器端的库，不能与 jQuery、ExtJS 相提并论。Node.js 是一个让 JavaScript 运行在服务端的开发平台，它让 JavaScript 成为脚本语言世界的一等公民，在服务端堪与 Java、PHP、Python、Perl、Ruby 平起平坐。</p>
-<h2 id="Node-的特点"><a href="#Node-的特点" class="headerlink" title="Node 的特点"></a>Node 的特点</h2><ul>
-<li>事件驱动</li>
-<li>非阻塞 IO 模型</li>
-<li>单线程</li>
-<li>跨平台</li>
-</ul>
-<h2 id="Node-发展历史"><a href="#Node-发展历史" class="headerlink" title="Node 发展历史"></a>Node 发展历史</h2><ul>
-<li><a href="http://gitbook.cn/books/58e796fd09012f0a48761eae/index.html" target="_blank" rel="noopener">聊聊 Node.js 的历史</a></li>
-<li><a href="https://cnodejs.org/topic/555d3d54e684c4c8088a0d78" target="_blank" rel="noopener">来自朴灵大大的 – Node.js 简史</a></li>
-</ul>
-<h2 id="为什么要学习-Node"><a href="#为什么要学习-Node" class="headerlink" title="为什么要学习 Node"></a>为什么要学习 Node</h2><ul>
-<li>企业需求</li>
-<li>进一步理解 Web</li>
-<li>大前端必备技能</li>
-<li>为了更好的学习前端框架</li>
-<li>增加职业竞争力</li>
-</ul>
-<h2 id="Node-能做什么"><a href="#Node-能做什么" class="headerlink" title="Node 能做什么"></a>Node 能做什么</h2><blockquote>
-<p><a href="https://www.zhihu.com/question/20796866" target="_blank" rel="noopener">知乎 - JavaScript能做什么，该做什么？</a><br>Atwood’s Law: any application that can be written in JavaScript, will eventually be written in JavaScript.<br>凡是能用 JavaScript 写出来的，最终都会用 JavaScript写出来。</p>
-</blockquote>
-<ul>
-<li>Web 服务器</li>
-<li>命令行工具</li>
-<li>网络爬虫</li>
-<li>桌面应用程序开发（Electron）</li>
-<li>……</li>
-</ul>
-<h2 id="这门课程你能学到啥？"><a href="#这门课程你能学到啥？" class="headerlink" title="这门课程你能学到啥？"></a>这门课程你能学到啥？</h2><ul>
-<li>更进一步的理解 B/S 编程模型</li>
-<li>模块化编程</li>
-<li>Node常用API</li>
-<li>JavaScript 异步编程<ul>
-<li>回调函数</li>
-<li>Promise</li>
-<li>Generator</li>
-<li>async/await 函数</li>
-</ul>
-</li>
-<li>Express Web 开发框架</li>
-<li>Ecmascript 6</li>
-<li>…</li>
-</ul>
-<h2 id="一些资源"><a href="#一些资源" class="headerlink" title="一些资源"></a>一些资源</h2><ul>
-<li><a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener">Node.js 官方文档</a></li>
-<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">Node.js 中文文档（非官方）</a></li>
-<li><a href="https://read.douban.com/ebook/12053349/" target="_blank" rel="noopener">深入浅出 Node.js</a></li>
-<li><a href="https://book.douban.com/subject/25892704/" target="_blank" rel="noopener">Node.js 权威指南</a></li>
-<li><a href="https://book.douban.com/subject/25870705/" target="_blank" rel="noopener">Node.js 实战</a></li>
-<li><a href="https://book.douban.com/subject/25867920/" target="_blank" rel="noopener">Node.js 实战</a></li>
-<li><a href="https://book.douban.com/subject/26642320/" target="_blank" rel="noopener">Node.js实战（第2季）</a></li>
-<li><a href="http://cnodejs.org/" target="_blank" rel="noopener">Node.js 中文社区</a></li>
-<li><a href="https://github.com/alsotang/node-lessons" target="_blank" rel="noopener">Node.js 包教不包会</a></li>
-<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">EcmaScript 6 入门</a></li>
-<li><a href="https://github.com/nqdeng/7-days-nodejs" target="_blank" rel="noopener">七天学会 NodeJS</a></li>
-<li>……</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/introduction/" data-id="cjfc7fcsc000dn4uxh9rlsgyy" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-https" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/29/https/" class="article-date">
-  <time datetime="2018-03-29T07:24:32.066Z" itemprop="datePublished">2018-03-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不使用SSL/TLS的HTTP通信，就是不加密的通信。所有信息明文传播，带来了三大风险。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1） 窃听风险（eavesdropping）：第三方可以获知通信内容。</span><br><span class="line"></span><br><span class="line">（2） 篡改风险（tampering）：第三方可以修改通信内容。</span><br><span class="line"></span><br><span class="line">（3） 冒充风险（pretending）：第三方可以冒充他人身份参与通信。</span><br></pre></td></tr></table></figure>
-<p>SSL/TLS协议是为了解决这三大风险而设计的，希望达到：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1） 所有信息都是加密传播，第三方无法窃听。</span><br><span class="line"></span><br><span class="line">（2） 具有校验机制，一旦被篡改，通信双方会立刻发现。</span><br><span class="line"></span><br><span class="line">（3） 配备身份证书，防止身份被冒充。</span><br></pre></td></tr></table></figure>
-<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1994年，NetScape公司设计了SSL协议（Secure Sockets Layer）的1.0版，但是未发布。</span><br><span class="line"></span><br><span class="line">1995年，NetScape公司发布SSL 2.0版，很快发现有严重漏洞。</span><br><span class="line"></span><br><span class="line">1996年，SSL 3.0版问世，得到大规模应用。</span><br><span class="line"></span><br><span class="line">1999年，互联网标准化组织ISOC接替NetScape公司，发布了SSL的升级版TLS 1.0版。</span><br><span class="line"></span><br><span class="line">2006年和2008年，TLS进行了两次升级，分别为TLS 1.1版和TLS 1.2版。最新的变动是2011年TLS 1.2的修订版。</span><br></pre></td></tr></table></figure>
-<p>目前，应用最广泛的是TLS 1.0，接下来是SSL 3.0。但是，主流浏览器都已经实现了TLS 1.2的支持。</p>
-<p>TLS 1.0通常被标示为SSL 3.1，TLS 1.1为SSL 3.2，TLS 1.2为SSL 3.3。</p>
-<h2 id="基本的运行过程"><a href="#基本的运行过程" class="headerlink" title="基本的运行过程"></a>基本的运行过程</h2><p>SSL/TLS协议的基本思路是采用<a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86" target="_blank" rel="noopener">公钥加密法</a>，也就是说，客户端先向服务器端索要公钥，然后用公钥加密信息，服务器收到密文后，用自己的私钥解密。</p>
-<p>但是，这里有两个问题。</p>
-<p><strong>（1）如何保证公钥不被篡改？</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决方法：将公钥放在数字证书中。只要证书是可信的，公钥就是可信的。</span><br></pre></td></tr></table></figure>
-<p><strong>（2）公钥加密计算量太大，如何减少耗用的时间？</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><a href="http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html" target="_blank" rel="noopener">HTTPS 升级指南</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2016/08/http.html" target="_blank" rel="noopener">HTTP 协议入门</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="noopener">SSL/TLS协议运行机制的概述</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html" target="_blank" rel="noopener">图解SSL/TLS协议</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html" target="_blank" rel="noopener">HTTPS的七个误解（译文）</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2014/09/ssl-latency.html" target="_blank" rel="noopener">SSL延迟有多大？</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86" target="_blank" rel="noopener">维基百科 - 公钥加密法</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E9%96%8B%E9%87%91%E9%91%B0%E8%AA%8D%E8%AD%89" target="_blank" rel="noopener">维基百科 - 公开秘钥认证</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/https/" data-id="cjfc7fcsa000cn4uxfi09h2ti" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/29/ithub/" data-id="cjfc7ias5000ftsuxb1jm38pb" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -735,7 +794,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -767,6 +826,14 @@
       <ul>
         
           <li>
+            <a href="/2018/03/29/12/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/许雯利SB/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/29/media/12/">(no title)</a>
           </li>
         
@@ -776,14 +843,6 @@
         
           <li>
             <a href="/2018/03/29/yarn/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/29/web/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/29/spider/">(no title)</a>
           </li>
         
       </ul>
